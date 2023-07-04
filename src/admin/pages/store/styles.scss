@@ -1,0 +1,35 @@
+@import '../../../variables.scss';
+
+.create-store-div {
+  display: flex;
+
+  .title-div {
+    flex: 1 1 100%;
+  }
+
+  .btn-store-create-div {    
+    flex: 0 0 113px;
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+  }
+}
+
+.accept-order {
+
+  label.ht-label {
+    float: left;
+  }
+
+  .switch.btn {
+    float: left;
+    clear: both;
+    border-radius: 33px;
+    overflow: hidden;
+    
+    &.btn-primary, .switch-on.btn-primary {
+      background-color: $primary-active-color;
+      border-color: $primary-active-color;
+    }
+  }
+}

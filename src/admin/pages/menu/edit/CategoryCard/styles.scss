@@ -1,0 +1,31 @@
+.category-card {
+  
+  .menu-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    .btn-show {
+      width: 85px;
+      min-width: 85px;
+      margin-left: 1rem;
+    }
+  }
+
+  .product-div {
+    overflow-x: auto;
+    margin-top: 2rem;
+    &.hide {
+      display: none;
+    }
+    .description-td {
+
+      @media screen and (max-width: 767px) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;  
+        max-width: 100px;
+      }
+    }
+  }
+}

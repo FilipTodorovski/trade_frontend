@@ -1,0 +1,303 @@
+.ht-sidebar {
+  display: flex;
+  flex: 1 0 220px;
+  flex-direction: column;
+  background: $primary-active-color;
+  // transition: width 0.5s;
+  z-index: 1;
+  position: relative;
+  padding: 20.6px 15px 54px;
+
+  .logo-svg {
+    display: flex;
+    justify-content: center;
+    .desktop {
+      display: block;
+      width: 90%;
+    }
+    .tablet {
+      display: none;
+    }
+  }
+
+  .sidebar-item {
+    font-size: 1rem;
+    font-weight: 600;
+    &.active {
+      padding: 8.5px 11.5px;
+      border-radius: 5px;
+      background-color: $primary-active-back-color;
+    }
+  }
+
+  .collapse-svg {
+    padding-left: 11.5px;
+  }
+
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+    flex: 1 1 auto;
+
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      padding: 0;
+      background: transparent;
+      border: none;
+
+      .navbar-nav {
+        flex-direction: column;
+        flex: 1;
+        width: 100%;
+
+        .nav-item {
+          display: flex !important;
+          margin-bottom: 17px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &.active {
+            .nav-link {
+              background-color: $primary-active-back-color;
+              color: $primary-active-color;
+              svg {
+                width: 22px;
+                &.svg-inline--fa {
+                  color: $primary-active-color;
+                }
+                &.stroke {
+                  stroke: $primary-active-color;
+                }
+                &.fill {
+                  fill: $primary-active-color;
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .nav-link {
+              color: $primary-active-color;
+              background-color: $primary-active-back-color;
+              svg {
+                &.svg-inline--fa {
+                  color: $primary-active-color;
+                }
+                &.fill {
+                  fill: $primary-active-color;
+                }
+
+                &.stroke {
+                  stroke: $primary-active-color;
+                }
+              }
+            }
+          }
+
+          .nav-link {
+            display: flex;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 17px;
+            letter-spacing: normal;
+            color: white;
+            align-items: center;
+            padding: 8.5px 11.5px;
+            border-radius: 5px;
+            width: 100%;
+            height: 42px;
+
+            svg {
+              &.svg-inline--fa {
+                color: white;
+                width: 25px;
+                height: 25px;
+              }
+              &.fill {
+                fill: white;
+              }
+
+              &.stroke {
+                stroke: white;
+              }
+
+              margin-right: 19px;
+
+              &.dashboard {
+                width: 22px;
+                height: 22px;
+              }
+              &.order {
+                width: 22px;
+                height: 22px;
+              }
+              &.menu {
+                width: 22px;
+                height: 24px;
+              }
+              &.store {
+                width: 22px;
+                height: 22px;
+              }
+            }
+
+            .notify-span {
+              margin-left: auto;
+              color: white;
+              background-color: $primary-red-color;
+              width: 25px;
+              height: 25px;
+              border-radius: 13px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+
+    .logo-svg {
+      width: 35px;
+      margin-right: 15px;
+    }
+  }
+
+  .avatar-link {
+    text-decoration: none;
+    color: gray;
+    &:hover {
+      color: white;
+    }
+
+    .avatar--wrapper {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font: 14px / 36px Helvetica, Arial, sans-serif;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      user-select: none;
+      background-color: rgb(121, 85, 72);
+      color: rgb(201, 165, 152);
+    }
+  }
+
+  &.collapsed {
+    .collapse-svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0;
+    }
+
+    flex: 1 0 70px;
+    .navbar {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: center;
+            svg {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  @media screen and (max-width: 991px) {
+    flex: 1 0 70px;
+
+    .logo-svg {
+      display: flex;
+      justify-content: center;
+
+      .desktop {
+        display: none;
+      }
+      .tablet {
+        display: block;
+        width: 40px;
+      }
+    }
+
+    .nav-link {
+      svg {
+        margin: 0 !important;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0;
+
+    .header-wrapper {
+      display: flex;
+      flex: 1 0 70px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+
+      .mobile-nav {
+        display: flex;
+
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .sidebar-content {
+      margin-top: 0;
+      background-color: white;
+      padding: 15px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
+      display: none;
+
+      &.mobile-menu {
+        display: block;
+      }
+
+      .nav-link {
+        svg {
+          margin-right: 20px !important;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}

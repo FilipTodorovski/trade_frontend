@@ -1,0 +1,30 @@
+#payment-page {
+  position: relative;
+  .adyen-checkout__button {
+    background: #213f5e !important;
+    margin-top: 40px;
+  }
+
+  .adyen-checkout__spinner {
+    border: 3px solid #213f5e;
+    border-top-color: transparent;
+  }
+
+  .term-check-div {
+    position: absolute;
+    bottom: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    .form-group {
+      margin-bottom: 0;
+    }
+    a {
+      color: #213f5e;
+      cursor: pointer;
+      line-height: 24px;
+      margin-left: 4px;
+    }
+  }
+}
